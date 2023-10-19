@@ -3,13 +3,13 @@ kind: Config
 deploy:
   kubectl:
     manifests:
-      - ./infra/k8s/*
+      - infra/k8s/*
 build:
   local:
     push: false
   artifacts:
     - image: melmore123/auth
-      context: auth
+      context: node/auth
       docker:
         dockerfile: Dockerfile
       sync:
