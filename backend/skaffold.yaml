@@ -6,7 +6,7 @@ deploy:
       - infra/k8s/*
 build:
   local:
-    push: false
+    push: false 
   artifacts:
     - image: melmore123/auth
       context: node/auth
@@ -16,3 +16,11 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
+    # - image: melmore123/client
+    #   context: ../client
+    #   docker:
+    #     dockerfile: Dockerfile
+    #   sync:
+    #     manual:
+    #       - src: '**/*.js'
+    #         dest: .
