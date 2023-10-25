@@ -10,9 +10,10 @@ driver = webdriver.Chrome()
 
 
 # Set up a route to interact with the button
-@app.route('/test_button')
+@app.route('/')
 def test_button():
-    driver.get('http://127.0.0.1:5001')  # Your Flask app's URL
+    server_url = "https://ticketsales.dev/auth/signup"  # Replace with your server's URL
+    driver.get(server_url)  # Your Flask app's URL
     button = driver.find_element_by_id('testButton')
     button.click()
     return 'Button clicked'

@@ -9,4 +9,4 @@ def index():
 
 
 if __name__ == '__app__':
-    app.run(host="0.0.0.0", port=5051)
+    app.run(debug=True)
