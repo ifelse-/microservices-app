@@ -146,3 +146,4 @@ dist
 .DS_Store
 
 backend/node/common/
+backend/node/nats-test/
