@@ -23,7 +23,15 @@ build:
       sync:
         manual:
           - src: 'src/**/*.ts'
-            dest: .        
+            dest: .  
+    - image: melmore123/orders
+      context: node/orders
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .              
     - image: melmore123/client
       context: ../client
       docker:
@@ -32,4 +40,3 @@ build:
         manual:
           - src: '**/*.js'
             dest: .
-    
