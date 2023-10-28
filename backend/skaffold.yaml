@@ -31,7 +31,15 @@ build:
       sync:
         manual:
           - src: 'src/**/*.ts'
-            dest: .              
+            dest: .      
+    - image: melmore123/expiration
+      context: node/expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .                          
     - image: melmore123/client
       context: ../client
       docker:
