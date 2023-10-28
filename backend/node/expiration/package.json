@@ -18,7 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@scriptmotor/common": "^1.0.9",
+    "@scriptmotor/common": "^1.0.11",
     "@types/bull": "^4.10.0",
     "@types/mongoose": "^5.11.97",
     "bull": "^4.11.4",

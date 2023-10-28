@@ -39,7 +39,15 @@ build:
       sync:
         manual:
           - src: 'src/**/*.ts'
-            dest: .                          
+            dest: .                 
+    - image: melmore123/payments
+      context: node/payments
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .                            
     - image: melmore123/client
       context: ../client
       docker:
