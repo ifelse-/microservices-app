@@ -18,8 +18,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@scriptmotor/common": "^1.0.7",
+    "@scriptmotor/common": "^1.0.9",
     "@types/bull": "^4.10.0",
+    "@types/mongoose": "^5.11.97",
     "bull": "^4.11.4",
     "node-nats-streaming": "^0.3.2",
     "ts-node-dev": "^2.0.0",
