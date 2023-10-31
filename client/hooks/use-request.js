@@ -28,5 +28,25 @@ export default ({ url, method, body, onSuccess }) => {
     }
   };
 
-  return { doRequest, errors };
+  const sendEmail = async (data, user) => {
+    console.log('POST to email service')
+    const config = {
+      headers: {
+        'Content-Type': 'application/json', // Set the Content-Type header to JSON
+      },
+    };
+
+    axios.post('/api/emails', {
+      data: data,
+      user: user
+    }, config)
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  };
+
+  return { doRequest, sendEmail, errors };
 };

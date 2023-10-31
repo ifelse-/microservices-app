@@ -1,5 +1,5 @@
 # This line specifies the base image for your Docker container, which is Python 3.11 slim version.
-FROM python:3.11.0
+FROM 3.11-slim
 
 # Set the working directory within the container to /backend.
 WORKDIR /backend

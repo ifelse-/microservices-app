@@ -5,14 +5,18 @@ import useRequest from '../../hooks/use-request';
 
 const OrderShow = ({ order, currentUser }) => {
   const [timeLeft, setTimeLeft] = useState(0);
-  const { doRequest, errors } = useRequest({
+  const { doRequest, sendEmail, errors } = useRequest({
     url: '/api/payments',
     method: 'post',
     body: {
       orderId: order.id,
     },
-    onSuccess: () => Router.push('/orders'),
+    onSuccess: () => {
+      sendEmail(order, currentUser)
+      Router.push('/orders')
+    }
   });
+
 
   useEffect(() => {
     const findTimeLeft = () => {
@@ -28,9 +32,12 @@ const OrderShow = ({ order, currentUser }) => {
     };
   }, [order]);
 
+
   if (timeLeft < 0) {
     return <div>Order Expired</div>;
   }
+
+
 
   return (
     <div>
@@ -49,7 +56,6 @@ const OrderShow = ({ order, currentUser }) => {
 OrderShow.getInitialProps = async (context, client) => {
   const { orderId } = context.query;
   const { data } = await client.get(`/api/orders/${orderId}`);
-
   return { order: data };
 };
 

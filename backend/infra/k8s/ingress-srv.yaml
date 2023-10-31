@@ -37,7 +37,14 @@ spec:
               service:
                 name: orders-srv
                 port:
-                  number: 3000                   
+                  number: 3000
+          - path: /api/emails/?(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: email-srv
+                port:
+                  number: 5000                           
           - path: /?(.*)
             pathType: ImplementationSpecific
             backend:
