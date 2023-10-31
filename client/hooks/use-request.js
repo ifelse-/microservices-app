@@ -41,7 +41,6 @@ export default ({ url, method, body, onSuccess }) => {
       user: user
     }, config)
     .then(function (response) {
-      console.log('response', response)
       console.log(response);
     })
     .catch(function (error) {
