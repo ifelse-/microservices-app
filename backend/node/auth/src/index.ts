@@ -15,7 +15,7 @@ const start = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
 
-    console.log('Auth Service Connected to MongoDb');
+    console.log('Auth Connected to MongoDb');
   } catch (err) {
     console.error(err);
   }
