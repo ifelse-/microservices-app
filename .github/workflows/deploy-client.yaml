@@ -5,14 +5,14 @@ on:
     branches:
       - main
     paths:
-      - 'backend/node/client/**'
+      - 'client/**'
       
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cd backend/node/client && docker build -t melmore123/client .
+      - run: cd client && docker build -t melmore123/client .
       - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
