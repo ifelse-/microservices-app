@@ -8,6 +8,11 @@ def index():
     return "hello it's working"
 
 
+@emails_blueprint.route('/process', methods=['GET'])
+def index():
+    return "Show process"
+
+
 @emails_blueprint.route('/send', methods=['POST'])
 def process_email():
     email_data = request.json  # Get email data from the POST request
