@@ -49,14 +49,14 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .           
-    - image: melmore123/emails
-      context: python/emails
-      docker:
-        dockerfile: Dockerfile
-      sync:
-        manual:
-          - src: '**/*.py'
-            dest: .                                    
+    # - image: melmore123/emails
+    #   context: python/emails
+    #   docker:
+    #     dockerfile: Dockerfile
+    #   sync:
+    #     manual:
+    #       - src: '**/*.py'
+    #         dest: .                                    
     - image: melmore123/client
       context: ../client
       docker:
