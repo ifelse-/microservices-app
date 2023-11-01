@@ -3,7 +3,7 @@ from sendmail import EmailSender
 emails_blueprint = Blueprint('emails_api_routes', __name__, url_prefix='/api/emails')
 
 
-@emails_blueprint.route('/show', methods=['GET'])
+@emails_blueprint.route('/page', methods=['GET'])
 def index():
     return "hello it's working"
 
