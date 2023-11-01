@@ -1,10 +1,12 @@
+nvm install 16.17.0
+
 
 # Frontend 
 
 npm run dev (any)
 
 
-# NPM Custom package
+NPM Custom package
 
 npm publish --access public
 
@@ -58,12 +60,24 @@ kubeadm init --kubelet-insecure-tls
 
 kubectl exec -it pod_id_name sh (any) (shell)
 
+kubectl rollout restart deployment (image)
+
+kubectl get nodes (any)
+
+kubectl config view
+
+kubectl config use-context docker-desktop
+
+
+
 # Skaffold run app 
 
 skaffold dev (dir)
 
+skaffold delete (dir)
 
-Chrome security bypass
+
+# Chrome security bypass
 
 type: thisisunsafe
 
@@ -82,7 +96,6 @@ npm run test (test dir)
 ….
 
 # Redis 
-
 redis-commander
 
 
@@ -91,6 +104,8 @@ redis-commander
 
 
 # Pipenv
+
+conda deactivate (optional)
 
 pip3 install --user pipenv (dir)
 
@@ -104,10 +119,14 @@ pipenv shell  (dir)
 
 pipenv run (dir)
  
-env FLASK_APP=app.py flask run (dir)
-Or
-export FLASK_APP=your_app_file.py
-flask run
+
+
+#  Flask
+flask db init
+
+flask db migrate
+
+flask db upgrade
 
 # GCloud
 
@@ -116,4 +135,13 @@ Build History
 Error Reporting
 Logs Explorer
 
-gcloud init (dir)
+# Deployment Digital Ocean
+
+brew install dolt
+
+doctl auth init --context <NAME>
+
+doctl account get
+
+doctl kubernetes cluster kubeconfig save <cluster-id|cluster-name> [flags]
+

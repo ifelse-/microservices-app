@@ -36,7 +36,7 @@ export default ({ url, method, body, onSuccess }) => {
       },
     };
 
-    axios.post('/api/emails', {
+    axios.post('/api/emails/sends', {
       data: data,
       user: user
     }, config)
