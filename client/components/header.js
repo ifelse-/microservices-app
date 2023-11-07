@@ -21,13 +21,15 @@ export default ({ currentUser }) => {
 
   return (
     <nav className="navbar navbar-light bg-light">
+     <div className="container">
       <Link className="navbar-brand" href="/">
-        GitTix
+        Microservices Ticket Sales app
       </Link>
 
       <div className="d-flex justify-content-end">
         <ul className="nav d-flex align-items-center">{links}</ul>
       </div>
+     </div>  
     </nav>
   );
 };
